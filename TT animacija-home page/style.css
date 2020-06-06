@@ -1,0 +1,146 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(53, 49, 49);
+
+
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    
+}
+
+svg{ 
+    margin-top: 6.5rem;
+    width: 500px;
+    height: 500px;
+
+}
+
+svg #sredina{
+    position: relative;
+}
+
+/* DOLE DESNO */
+
+svg #dole_desno{
+    animation-name: dole-desno;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+
+}
+
+@keyframes dole-desno {
+    0% { transform: translateX(0px) translateY(0px); }
+    50% { 
+            transform: translateX(-20px) translateY(20px); 
+            animation-delay: 0.3s;    
+        }
+    100% { transform: translateX(0px) translateY(0px); }
+
+}
+
+/* DOLE LEVO */
+
+svg #dole_levo{
+    animation-name: dole-levo;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+   
+
+}
+
+@keyframes dole-levo {
+    0% { transform: translateX(0px) translateY(0px); }
+    50% { 
+            transform: translateX(-30px) translateY(30px); 
+            animation-delay: 0.5s;    
+        }
+    100% { transform: translateX(0px) translateY(0px); }
+
+}
+
+/* GORE DESNO */
+
+svg #gore_desno{
+    animation-name: gore-desno;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+
+    
+
+}
+
+@keyframes gore-desno {
+    0% { transform: translateX(0px) translateY(0px); }
+    50% { 
+            transform: translateX(30px) translateY(-30px); 
+            animation-delay: 0.5s;    
+        }
+    100% { transform: translateX(0px) translateY(0px); }
+
+}
+
+/* GORE LEVO */
+
+svg #gore_levo{
+    animation-name: gore-levo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+ 
+
+}
+
+@keyframes gore-levo {
+    0% { transform: translateX(0px) translateY(0px); }
+    50% { 
+            transform: translateX(20px) translateY(-20px); 
+            animation-delay: 0.3s;    
+        }
+    100% { transform: translateX(0px) translateY(0px); }
+
+}
+
+.main .bgd-image {
+        background-image: url(telefoni-1.png);
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 25rem;
+        height: 30rem;
+        z-index: -1;
+        animation-name: promena-pozadine;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-delay: 0.3s;
+
+        
+}
+
+
+@keyframes promena-pozadine {
+    0% {
+        background-image: url(telefoni-1.png);
+        animation-delay: 1s;
+    }
+    33% {
+        background-image: url(laptop-1.png);
+        animation-delay: 1s;
+    }
+    66% {
+        background-image: url(pc-1.png);
+        animation-delay: 1s;
+    }
+    100% {background-image: url(telefoni-1.png);}
+
+}
